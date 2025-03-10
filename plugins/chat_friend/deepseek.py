@@ -25,7 +25,7 @@ async def ai_message(user_input: str, character="魈") -> str:
         char_config = get_character(character)
         
         response = await client.chat.completions.create(
-            model="deepseek-reasoner",
+            model="deepseek-chat",
             messages=[
                 {"role": "system", "content": char_config["system_prompt"]},
                 {"role": "user", "content": user_input},
