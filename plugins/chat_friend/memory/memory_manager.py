@@ -52,7 +52,7 @@ async def manage_temp_memory(user_id):
     temp_memory_data = await get_temp_memory(user_id) 
     temp_count = len(temp_memory_data)
 
-    if temp_count < 10:
+    if temp_count < 5:
         print("消息数量为："+str(temp_count)+",不需要处理")
         # 如果短期记忆条数小于10，则不做处理，返回
         return
@@ -70,11 +70,8 @@ async def manage_temp_memory(user_id):
         # 使用 check_temp_memory 来总结这些短期记忆
         summary = await check_mid_memory(user_id, formatted_content)
 
-        print( "总结结果为："+summary )
-        if summary == "无重要内容":
-            # 如果总结结果为 "无重要内容"，则不存储
-            return
-        else:
+        print( "总结结果为："+summary )            
+        if summary != "无重要内容":
             # 存入中期记忆
             await insert_mid_memory(user_id, summary)
 
@@ -89,7 +86,7 @@ async def manage_mid_memory(user_id):
     mid_memory_data = await get_mid_memory(user_id)
     mid_count = len(mid_memory_data)
 
-    if mid_count < 10:
+    if mid_count < 5:
         # 如果长期记忆条数小于50，则不做处理，返回
         print ("中期记忆条数为："+str(mid_count)+"不需要处理")
         return
@@ -102,10 +99,8 @@ async def manage_mid_memory(user_id):
         
         # 使用 check_long_memory 来总结这些长期记忆
         summary = await check_long_memory(user_id, formatted_content)
-        if summary == "无重要内容":
-            return
-        else :
-            print( "总结结果为："+summary )
+        print( "总结结果为："+summary )
+        if summary != "无重要内容":
             await insert_long_memory(user_id, summary)
         await clear_mid_memory(user_id)
     print("中期记忆处理完成")
@@ -140,7 +135,6 @@ async def insert_temp_memory(user_id, content, role):
     cursor.execute("INSERT INTO temp_memory (user_id, content, role) VALUES (?, ?, ?)", (user_id, content, role))
     conn.commit()
     conn.close()
-    await manage_temp_memory(user_id)
     print("插入一条临时数据完成")
 
 # 插入中期记忆
@@ -155,7 +149,6 @@ async def insert_mid_memory(user_id, content):
     except sqlite3.IntegrityError:
         pass  # 忽略重复内容
     conn.close()
-    await manage_mid_memory(user_id)
     print("插入一条中期数据完成")
 
 # 插入长期记忆
@@ -251,7 +244,7 @@ async def get_mid_memory(user_id):
         return {"content": ""}  # 返回空字符串
     
     print(f"获取到的中期记忆内容：{memories[0]['content']}")
-    return {"content": memories[0]['content']}  # 返回第一条中期记忆的内容
+    return memories
 
 
 # 获取用户的全部长期记忆（拼接成一段话）
