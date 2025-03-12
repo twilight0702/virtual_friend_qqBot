@@ -10,7 +10,7 @@ async def send_delayed_message(user_id, api, character):
     if user_id in USER_INPUTS:
         final_message = USER_INPUTS.pop(user_id)  # 取出缓冲内容
         try:
-            await insert_temp_memory(user_id, final_message, "user")
+            insert_temp_memory(user_id, final_message, "user")
         except Exception as e:
             print(f"Error inserting temp memory: {e}")
         ai_response = await ai_message(final_message, character,user_id)
@@ -20,7 +20,7 @@ async def send_delayed_message(user_id, api, character):
             if sentence.strip():
                 await api.post_private_msg(user_id, sentence.strip())
                 try:
-                    await insert_temp_memory(user_id, sentence.strip(), "bot")
+                    insert_temp_memory(user_id, sentence.strip(), "bot")
                 except Exception as e:
                     print(f"Error inserting temp memory: {e}")
                 await asyncio.sleep(1.5)  # 模拟打字间隔

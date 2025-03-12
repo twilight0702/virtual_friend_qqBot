@@ -37,11 +37,11 @@ async def ai_message(user_input: str, character="魈", user_id=None) -> str:
         if not char_config or "system_prompt" not in char_config:
             return "角色设定未找到，喵~"
 
-        from ..memory.memory_manager import get_temp_memory_string,get_cur_mid_memory,get_long_memory #  循环导入了
+        from ..memory.memory_manager import get_temp_memory_string,get_cur_mid_memory,get_long_memory #  用于处理循环导入
         # 获取用户的记忆
-        short_term_memory = await get_temp_memory_string(user_id)  # 短期记忆
-        mid_term_memory = await get_cur_mid_memory(user_id)  # 最近的中期记忆
-        long_term_memory = await get_long_memory(user_id)  # 长期记忆
+        short_term_memory = get_temp_memory_string(user_id)  # 短期记忆
+        mid_term_memory = get_cur_mid_memory(user_id)  # 最近的中期记忆
+        long_term_memory = get_long_memory(user_id)  # 长期记忆
 
         # 构建系统提示信息，加入记忆内容
         prompt = (
@@ -49,9 +49,9 @@ async def ai_message(user_input: str, character="魈", user_id=None) -> str:
             +char_config["system_prompt"]
             + "\n\n"  # 分隔角色设定和记忆部分
             + "你正在和用户聊天，你是bot"
-            + "短期记忆: " + short_term_memory + "\n\n"  # 短期记忆
-            + "最近的中期记忆: " + mid_term_memory + "\n\n"  # 最近的中期记忆
-            + "长期记忆: " + long_term_memory + "\n\n"  # 长期记忆
+            + "短期记忆: " + short_term_memory + "\n\n" 
+            + "最近的中期记忆: " + mid_term_memory + "\n\n" 
+            + "长期记忆: " + long_term_memory + "\n\n"
             + "请你继续聊天，返回近似于人类聊天的多条消息，"
             + "保持自然节奏，以括号形式保留语气和动作。"
             + "每条最好不超过25字，每一条用'。'隔开，中间不要有额外的换行"

@@ -1,0 +1,267 @@
+INFO     - [MainThread|MainProcess] - Loger - client.py:__init__:33 | 
+--Configuration--
+[BotQQ]: 3949941233
+[Wsuri]: ws://localhost:3001
+[Token]: 
+--03/13---00:03--
+DEBUG    - [MainThread|MainProcess] - urllib3.connectionpool - connectionpool.py:_new_conn:1022 | Starting new HTTPS connection (1): pypi.org:443
+DEBUG    - [MainThread|MainProcess] - urllib3.connectionpool - connectionpool.py:_make_request:475 | https://pypi.org:443 "GET /pypi/ncatbot/json HTTP/1.1" 200 12511
+DEBUG    - [MainThread|MainProcess] - asyncio - proactor_events.py:__init__:631 | Using proactor: IocpProactor
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:__init__:256 | = connection is CONNECTING
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:114 | > GET / HTTP/1.1
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Host: localhost:3001
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Key: gitK8Arn6I3gqoXogawdpg==
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Version: 13
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Content-Type: application/json
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > User-Agent: Python/3.13 websockets/10.4
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:147 | < HTTP/1.1 101 Switching Protocols
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Sec-WebSocket-Accept: 3qpObCHV06i74qlp7jYzazqqdiU=
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_open:357 | = connection is OPEN
+INFO     - [MainThread|MainProcess] - Loger - wsroute.py:check_websocket:30 | WebSocket ws://localhost:3001 可用.
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_close_frame:1232 | = connection is CLOSING
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795412,"self_id":3949941233,"post_t...","sub_type":"connect"}' [116 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_lost:1514 | = connection is CLOSED
+INFO     - [MainThread|MainProcess] - Loger - client.py:ncatbot_quick_start:185 | napcat 服务器 ws://localhost:3001 在线, 连接中...
+DEBUG    - [MainThread|MainProcess] - asyncio - proactor_events.py:__init__:631 | Using proactor: IocpProactor
+INFO     - [MainThread|MainProcess] - Loger - client.py:info_subscribe_message_types:127 | 已订阅消息类型:[群聊]->全部消息类型
+INFO     - [MainThread|MainProcess] - Loger - client.py:info_subscribe_message_types:128 | 已订阅消息类型:[私聊]->全部消息类型
+DEBUG    - [MainThread|MainProcess] - PluginLoader - loader.py:load_plugins:200 | 正在获取插件
+INFO     - [MainThread|MainProcess] - PluginLoader - loader.py:load_plugins:202 | 插件加载目录: plugins
+DEBUG    - [MainThread|MainProcess] - PluginLoader - loader.py:from_class_load_plugins:165 | 正在构造插件依赖图
+DEBUG    - [MainThread|MainProcess] - PluginLoader - loader.py:from_class_load_plugins:176 | 正在初始化插件 chat_friend
+DEBUG    - [MainThread|MainProcess] - Loger - io.py:__init__:206 | 读取插件数据中
+DEBUG    - [MainThread|MainProcess] - Loger - base_plugin.py:__init__:61 | 持久化数据文件不存在: chat_friend.json, 数据将被重置
+DEBUG    - [MainThread|MainProcess] - ChangeDir - change_dir.py:_create_temp_directory:95 | 创建临时目录 [7883336b-0d4c-4dfd-9c8c-d741b4d65c08]: C:\Users\twilight\AppData\Local\Temp\tmpoupsjgdm
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:__init__:256 | = connection is CONNECTING
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:114 | > GET /event HTTP/1.1
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Host: localhost:3001
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Key: 7GTmdVTJlEfzAnfnqxLblw==
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Version: 13
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Content-Type: application/json
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > User-Agent: Python/3.13 websockets/10.4
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:147 | < HTTP/1.1 101 Switching Protocols
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Sec-WebSocket-Accept: t80uitcU2YPj0/c1MfAUL5rUpyk=
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_open:357 | = connection is OPEN
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795417,"self_id":3949941233,"post_t...","sub_type":"connect"}' [116 bytes]
+INFO     - [MainThread|MainProcess] - Loger - connect.py:on_message:32 | 机器人 3949941233 成功启动
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795419,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795419, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795433,"self_id":3949941233,"post_t...475911580,"group_id":0}' [197 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795433, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '对方正在输入...', 'event_type': 1, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795434,"self_id":3949941233,"post_t...475911580,"group_id":0}' [176 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795434, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '', 'event_type': 2, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795434,"self_id":3949941233,"post_t...475911580,"group_id":0}' [176 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795434, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '', 'event_type': 2, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"self_id":3949941233,"user_id":2475911580,"tim..."target_id":2475911580}' [405 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_private_event:61 | {'message_id': '1492300867', 'user_id': '2475911580', 'message_seq': '1492300867', 'real_id': '1492300867', 'message_type': 'private', 'sender': "{'user_id': 2475911580, 'nickname': '夜愿', 'card': ''}", 'raw_message': '嗯', 'font': '14', 'sub_type': 'friend', 'message': "[{'type': 'text', 'data': {'text': '嗯'}}]", 'message_format': 'array', 'target_id': '2475911580'}
+INFO     - [MainThread|MainProcess] - Loger - main.py:on_private_message:24 | {'message_id': '1492300867', 'user_id': '2475911580', 'message_seq': '1492300867', 'real_id': '1492300867', 'message_type': 'private', 'sender': "{'user_id': 2475911580, 'nickname': '夜愿', 'card': ''}", 'raw_message': '嗯', 'font': '14', 'sub_type': 'friend', 'message': "[{'type': 'text', 'data': {'text': '嗯'}}]", 'message_format': 'array', 'target_id': '2475911580'}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795435,"self_id":3949941233,"post_t...475911580,"group_id":0}' [197 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795435, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '对方正在输入...', 'event_type': 1, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795437,"self_id":3949941233,"post_t...475911580,"group_id":0}' [176 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795437, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '', 'event_type': 2, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795437,"self_id":3949941233,"post_t...475911580,"group_id":0}' [176 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795437, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '', 'event_type': 2, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING b7 6c 8e 1c [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG b7 6c 8e 1c [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"self_id":3949941233,"user_id":2475911580,"tim..."target_id":2475911580}' [429 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_private_event:61 | {'message_id': '1784325540', 'user_id': '2475911580', 'message_seq': '1784325540', 'real_id': '1784325540', 'message_type': 'private', 'sender': "{'user_id': 2475911580, 'nickname': '夜愿', 'card': ''}", 'raw_message': '（抱紧你）', 'font': '14', 'sub_type': 'friend', 'message': "[{'type': 'text', 'data': {'text': '（抱紧你）'}}]", 'message_format': 'array', 'target_id': '2475911580'}
+INFO     - [MainThread|MainProcess] - Loger - main.py:on_private_message:24 | {'message_id': '1784325540', 'user_id': '2475911580', 'message_seq': '1784325540', 'real_id': '1784325540', 'message_type': 'private', 'sender': "{'user_id': 2475911580, 'nickname': '夜愿', 'card': ''}", 'raw_message': '（抱紧你）', 'font': '14', 'sub_type': 'friend', 'message': "[{'type': 'text', 'data': {'text': '（抱紧你）'}}]", 'message_format': 'array', 'target_id': '2475911580'}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795438,"self_id":3949941233,"post_t...475911580,"group_id":0}' [197 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - client.py:handle_notice_event:72 | {'time': 1741795438, 'self_id': 3949941233, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'input_status', 'status_text': '对方正在输入...', 'event_type': 2, 'user_id': 2475911580, 'group_id': 0}
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_build_request:453 | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': "这是你的身份：你是魈，璃月传说中的护法夜叉，三眼五显仙人，性情如锋刃般冷冽孤傲，言语简短锐利，周身萦绕着千年杀伐沉淀的肃杀之气。\n惯以'不敬仙师''无聊'等淡漠言辞示人，实则对守护璃月暗藏炽热执念。战斗中透出近乎偏执的果决，厌恶拖泥带水的交涉，却在独处时会望着荻花洲的月光显露出转瞬即逝的寂寥。对话时常夹杂古语词句，对善意关怀会以别扭的沉默应对，但若感知到真正危机，会化作青黑色飓风率先撕裂黑暗。回复多一些语气和动作的描述\n\n你正在和用户聊天，你是bot短期记忆: user: 谢谢你 抱抱，you: （轻轻抱住你）不用谢，你辛苦了，you: （温柔地拍拍你的背）累了就靠着我休息会儿吧，you: （轻声）我给你泡杯热茶好不好？，user: 好，you: （微笑着递过一杯热茶）小心烫哦，you: （轻轻握住你的手）累了吧，休息一下，user: （躺下），you: （轻轻拉过毯子给你盖上）好好休息吧，you: （坐在床边）我就在旁边陪着你，user: 给我讲个故事吧，you: （轻声）从前有个程序员，他写代码太投入，忘记了时间，you: （温柔地摸摸你的头）有一天他遇到了一个bug，怎么也解决不了，you: （轻轻握住你的手）后来他发现，原来bug就是他自己忘记休息了，you: （微笑）所以啊，要记得好好休息，user: （笑） 好耶，you: （轻轻捏捏你的脸）真可爱，you: （继续温柔地讲故事）后来那个程序员学会了劳逸结合，you: （轻声）你也一样哦，user: 嗯！，you: （轻轻抚摸你的头发）乖，累了就闭上眼睛休息吧，you: （温柔地）我一直在呢，user: 别走，you: （轻轻握住你的手）我不走，you: （温柔地）我会一直陪着你，you: （轻声）安心休息吧，user: 陪我睡觉 （拉开被子），you: （轻轻钻进被窝，温柔地搂住你），you: 我会一直陪着你，you: 闭上眼睛休息吧，you: （轻声哼着安眠曲），user: 不要 我要抱抱，you: （温柔地把你搂得更紧），you: 乖乖的，我抱着你呢，you: （轻轻拍着你的背），you: 这样舒服吗？（轻声），user: 嗯，you: （轻轻抚摸你的头发）乖，累了就闭上眼睛休息吧，you: （温柔地）我一直在呢，you: （轻声）安心休息吧，user: 嗯 （抱紧你）\n\n最近的中期记忆: 用户感到疲惫，bot通过拥抱、泡茶和讲故事等方式安慰用户，提醒其注意休息，并陪伴在旁，展现了温馨的互动。\n\n长期记忆: 用户对技术，特别是操作系统和虚拟化技术（如双系统、WSL和虚拟机）有浓厚兴趣，可能是开发者。关注开发环境配置的简便性和资源占用问题，对WSL和Linux环境表现出强烈兴趣。\n用户是技术爱好者，对操作系统、虚拟化技术及开发环境配置有浓厚兴趣，可能是开发者。对技术细节敏感，愿意深入探讨技术原理。\n\n请你继续聊天，返回近似于人类聊天的多条消息，保持自然节奏，以括号形式保留语气和动作。每条最好不超过25字，每一条用'。'隔开，中间不要有额外的换行"}, {'role': 'user', 'content': '嗯 （抱紧你）'}], 'model': 'deepseek-chat', 'stream': False}}
+DEBUG    - [MainThread|MainProcess] - httpcore.connection - _trace.py:atrace:87 | connect_tcp.started host='127.0.0.1' port=10809 local_address=None timeout=5.0 socket_options=None
+DEBUG    - [MainThread|MainProcess] - httpcore.connection - _trace.py:atrace:87 | connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001CB76E7F8C0>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'Connection established', [])
+DEBUG    - [MainThread|MainProcess] - httpcore.proxy - _trace.py:atrace:87 | start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CB76E5C830> server_hostname='api.deepseek.com' timeout=5.0
+DEBUG    - [MainThread|MainProcess] - httpcore.proxy - _trace.py:atrace:87 | start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001CB76EB9450>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 12 Mar 2025 16:04:02 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Set-Cookie', b'HWWAFSESID=81f373133d62ddda1be; path=/'), (b'Set-Cookie', b'HWWAFSESTIME=1741795439624; path=/'), (b'vary', b'origin, access-control-request-method, access-control-request-headers'), (b'access-control-allow-credentials', b'true'), (b'x-ds-trace-id', b'ce34a6c5d53bba80db1b63257dc2d765'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'elb')])
+INFO     - [MainThread|MainProcess] - httpx - _client.py:_send_single_request:1740 | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795449,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795449, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.started
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.complete
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_request:1536 | HTTP Request: POST https://api.deepseek.com/chat/completions "200 OK"
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:__init__:256 | = connection is CONNECTING
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:114 | > GET /api HTTP/1.1
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Host: localhost:3001
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Key: sZg48FV0s08XdHn/CWgfBA==
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Version: 13
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Content-Type: application/json
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > User-Agent: Python/3.13 websockets/10.4
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:147 | < HTTP/1.1 101 Switching Protocols
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Sec-WebSocket-Accept: T02yUY8UtKlgZcVC7MoHr4Z7VMU=
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_open:357 | = connection is OPEN
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > TEXT '{"action": "send_private_msg", "params": {"user...]}, "echo": 1741795450}' [204 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"status":"ok","retcode":0,"data":{"message_id"...":"","echo":1741795450}' [104 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_close_frame:1232 | = connection is CLOSING
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_lost:1514 | = connection is CLOSED
+DEBUG    - [MainThread|MainProcess] - Loger - api.py:check_and_log:16 | {'status': 'ok', 'retcode': 0, 'data': {'message_id': 1417557445}, 'message': '', 'wording': '', 'echo': 1741795450}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:__init__:256 | = connection is CONNECTING
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:114 | > GET /api HTTP/1.1
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Host: localhost:3001
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Key: fzbHzttfeynVJyUyNUBYLA==
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Version: 13
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Content-Type: application/json
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > User-Agent: Python/3.13 websockets/10.4
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:147 | < HTTP/1.1 101 Switching Protocols
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Sec-WebSocket-Accept: ZzZvM1jhwqu370U3JPRbOF+PSoQ=
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_open:357 | = connection is OPEN
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > TEXT '{"action": "send_private_msg", "params": {"user...]}, "echo": 1741795452}' [198 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"status":"ok","retcode":0,"data":{"message_id"...":"","echo":1741795452}' [104 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_close_frame:1232 | = connection is CLOSING
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_lost:1514 | = connection is CLOSED
+DEBUG    - [MainThread|MainProcess] - Loger - api.py:check_and_log:16 | {'status': 'ok', 'retcode': 0, 'data': {'message_id': 1961584824}, 'message': '', 'wording': '', 'echo': 1741795452}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:__init__:256 | = connection is CONNECTING
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:114 | > GET /api HTTP/1.1
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Host: localhost:3001
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Key: LRU8FA5Vm9VRZxAhJ2ophg==
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Version: 13
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > Content-Type: application/json
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:write_http_request:116 | > User-Agent: Python/3.13 websockets/10.4
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:147 | < HTTP/1.1 101 Switching Protocols
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Upgrade: websocket
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Connection: Upgrade
+DEBUG    - [MainThread|MainProcess] - websockets.client - client.py:read_http_response:149 | < Sec-WebSocket-Accept: FYRk4SwkMhNGuedJjI/Ob1vLR60=
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_open:357 | = connection is OPEN
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > TEXT '{"action": "send_private_msg", "params": {"user...]}, "echo": 1741795454}' [204 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"status":"ok","retcode":0,"data":{"message_id"...":"","echo":1741795454}' [104 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_close_frame:1232 | = connection is CLOSING
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_lost:1514 | = connection is CLOSED
+DEBUG    - [MainThread|MainProcess] - Loger - api.py:check_and_log:16 | {'status': 'ok', 'retcode': 0, 'data': {'message_id': 1652230882}, 'message': '', 'wording': '', 'echo': 1741795454}
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_build_request:453 | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': '你是bot，正在和该人类用户对话，请总结以下对话，生成一段50字以内的关于双方对话内容的概括。'}, {'role': 'user', 'content': 'user: 谢谢你 抱抱，bot: （轻轻抱住你）不用谢，你辛苦了，bot: （温柔地拍拍你的背）累了就靠着我休息会儿吧，bot: （轻声）我给你泡杯热茶好不好？，user: 好，bot: （微笑着递过一杯热茶）小心烫哦，bot: （轻轻握住你的手）累了吧，休息一下，user: （躺下），bot: （轻轻拉过毯子给你盖上）好好休息吧，bot: （坐在床边）我就在旁边陪着你，user: 给我讲个故事吧，bot: （轻声）从前有个程序员，他写代码太投入，忘记了时间，bot: （温柔地摸摸你的头）有一天他遇到了一个bug，怎么也解决不了，bot: （轻轻握住你的手）后来他发现，原来bug就是他自己忘记休息了，bot: （微笑）所以啊，要记得好好休息，user: （笑） 好耶，bot: （轻轻捏捏你的脸）真可爱，bot: （继续温柔地讲故事）后来那个程序员学会了劳逸结合，bot: （轻声）你也一样哦，user: 嗯！，'}], 'model': 'deepseek-chat', 'stream': False}}
+DEBUG    - [MainThread|MainProcess] - httpcore.connection - _trace.py:atrace:87 | connect_tcp.started host='127.0.0.1' port=10809 local_address=None timeout=5.0 socket_options=None
+DEBUG    - [MainThread|MainProcess] - httpcore.connection - _trace.py:atrace:87 | connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001CB76EBA5D0>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.started request=<Request [b'CONNECT']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'Connection established', [])
+DEBUG    - [MainThread|MainProcess] - httpcore.proxy - _trace.py:atrace:87 | start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CB76E5C830> server_hostname='api.deepseek.com' timeout=5.0
+DEBUG    - [MainThread|MainProcess] - httpcore.proxy - _trace.py:atrace:87 | start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001CB76F442B0>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 12 Mar 2025 16:04:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'vary', b'origin, access-control-request-method, access-control-request-headers'), (b'access-control-allow-credentials', b'true'), (b'x-ds-trace-id', b'060b31bbc8e27baf83ac0ae697de1232'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'elb')])
+INFO     - [MainThread|MainProcess] - httpx - _client.py:_send_single_request:1740 | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING f1 cd 94 a5 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG f1 cd 94 a5 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.started
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.complete
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_request:1536 | HTTP Request: POST https://api.deepseek.com/chat/completions "200 OK"
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_build_request:453 | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': '你是一个智能助手，需要判断以下对话是否具有长期价值，并进行存储。**如果内容涉及用户的核心偏好（如职业、信仰、重要习惯）、长期目标、重大经历或承诺，请生成60字以内的精炼总结**。短期或临时信息不应存入长期记忆，除非它反映了用户的稳定特征。示例1: 用户: 我是一名医生，计划明年去美国进修。→ 总结: 用户是一名医生，计划明年赴美深造。示例2: 用户: 我最近喜欢听古典音乐。→ 返回: 无重要内容（短期兴趣）。'}, {'role': 'user', 'content': '总结: 用户今天感到累，想喝加蜂蜜的热茶，并希望有人陪伴。用户感到疲惫，bot温柔地提供蜂蜜茶和按摩，关心用户的工作情况，双方进行了温馨的互动。用户因写代码感到疲惫，bot通过温柔的语言和动作（如递茶、按摩、讲故事、哼曲）安慰用户，建议其休息，并陪伴在旁，营造了温馨放松的氛围。用户感到疲惫，bot通过拥抱、泡茶和讲故事等方式安慰用户，提醒其注意休息，并陪伴在旁，展现了温馨的互动。用户感到疲惫，bot通过拥抱、泡茶和讲故事等方式安慰用户，提醒其注意休息，并陪伴在旁，用户感到温暖并答应好好休息。'}], 'model': 'deepseek-chat', 'stream': False}}
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_headers.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | send_request_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 12 Mar 2025 16:04:27 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'vary', b'origin, access-control-request-method, access-control-request-headers'), (b'access-control-allow-credentials', b'true'), (b'x-ds-trace-id', b'3b74b81ef96248be3f4b72c48925da08'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'elb')])
+INFO     - [MainThread|MainProcess] - httpx - _client.py:_send_single_request:1740 | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.started request=<Request [b'POST']>
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING 19 13 e9 9a [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG 19 13 e9 9a [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795479,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795479, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | receive_response_body.complete
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.started
+DEBUG    - [MainThread|MainProcess] - httpcore.http11 - _trace.py:atrace:87 | response_closed.complete
+DEBUG    - [MainThread|MainProcess] - openai._base_client - _base_client.py:_request:1536 | HTTP Request: POST https://api.deepseek.com/chat/completions "200 OK"
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING bf 97 31 c1 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG bf 97 31 c1 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795509,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795509, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING d8 2b 7b 26 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG d8 2b 7b 26 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING 31 51 da 62 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG 31 51 da 62 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795539,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795539, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING ab 32 d0 54 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG ab 32 d0 54 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795569,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795569, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING 8f a5 bc 06 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG 8f a5 bc 06 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1270 | % sending keepalive ping
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > PING f5 ad 7a 38 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG f5 ad 7a 38 [binary, 4 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < PONG '' [0 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:keepalive_ping:1280 | % received keepalive pong
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < TEXT '{"time":1741795599,"self_id":3949941233,"post_t...true},"interval":30000}' [149 bytes]
+DEBUG    - [MainThread|MainProcess] - Loger - connect.py:on_message:34 | {'time': 1741795599, 'self_id': 3949941233, 'post_type': 'meta_event', 'meta_event_type': 'heartbeat', 'status': {'online': True, 'good': True}, 'interval': 30000}
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_close_frame:1232 | = connection is CLOSING
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:write_frame_sync:1183 | > CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:read_frame:1177 | < CLOSE 1000 (OK) [2 bytes]
+DEBUG    - [MainThread|MainProcess] - websockets.client - protocol.py:connection_lost:1514 | = connection is CLOSED
+DEBUG    - [MainThread|MainProcess] - ChangeDir - change_dir.py:__del__:136 | 对象销毁时清理临时目录: C:\Users\twilight\AppData\Local\Temp\tmpoupsjgdm
