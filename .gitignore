@@ -1,1 +1,54 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+**/__pycache__/
+
+
+# Python virtual environment
+venv/
+ENV/
+env/
+*.env
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+
+# Testing
+*.log
+*.pot
+*.py[cod]
+*.cover
+*.tox/
+*.nox/
+*.coverage
+*.hypothesis/
+
+# IDE or editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
 logs/
+
+plugins/chat_friend/__pycache__/
+plugins/chat_friend/ai_utils/__pycache__/
+plugins/chat_friend/config/__pycache__/
+plugins/chat_friend/handlers/__pycache__/
+plugins/chat_friend/memory/__pycache__/
+
+napcat/logs/
