@@ -3,6 +3,10 @@ import asyncio
 from openai import AsyncOpenAI, OpenAIError
 from ..config.config_loader import get_character
 
+import logging
+
+logger = logging.getLogger(__name__)  # 获取当前模块的 logger
+
 API_KEY = "sk-38b1d8c0152545758b2265cd85ffc3bf" # 之后修改成配置文件读取，这里为方便直接写这里了
 BASE_URL = "https://api.deepseek.com"
 
@@ -57,7 +61,7 @@ async def ai_message(user_input: str, character="魈", user_id=None) -> str:
             + "每条最好不超过25字，每一条用'。'隔开，中间不要有额外的换行"
         )
 
-        print(prompt)
+        logger.info(f"发送给ai的prompt: {prompt}")
 
         # 调用 AI 生成回复
         response = await use_ai(prompt, user_input)
@@ -70,7 +74,7 @@ async def ai_message(user_input: str, character="魈", user_id=None) -> str:
         if "rate limit" in str(e).lower():
             return await handle_rate_limit()
         
-        print(f"API 调用失败: {str(e)}")
+        logger.error(f"API 调用失败: {str(e)}")
         return "出错了，稍后再试喵~"
 
 
@@ -92,5 +96,5 @@ async def split_response_with_llm(text):
         return format_response(response.choices[0].message.content)
         
     except OpenAIError as e:  # 捕获所有 OpenAI 相关错误
-        print(f"API 调用失败: {str(e)}")
+        logger.info(f"API 调用失败: {str(e)}")
         return text  # 如果拆分失败，返回原文本

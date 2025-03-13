@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import logging
+
+logger = logging.getLogger(__name__)  # 获取当前模块的 logger
 
 _CONFIG_PATH = Path(__file__).parent / "characters.json"
 _CHARACTERS = {}
@@ -11,9 +14,9 @@ def load_config():
     try:
         with open(_CONFIG_PATH, 'r', encoding='utf-8') as f:
             _CHARACTERS = json.load(f)
-        print(f"配置已重载，当前角色：{list(_CHARACTERS.keys())}")
+        logger.info(f"配置已重载，当前角色：{list(_CHARACTERS.keys())}")
     except Exception as e:
-        print(f"配置加载失败：{str(e)}")
+        logger.info(f"配置加载失败：{str(e)}")
 
 class ConfigHandler(FileSystemEventHandler):
     def on_modified(self, event):

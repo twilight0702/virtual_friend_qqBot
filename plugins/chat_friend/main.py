@@ -1,12 +1,19 @@
 import os
 import asyncio
-
+import logging
 from ncatbot.plugin import BasePlugin, CompatibleEnrollment
 
 from ncatbot.core.message import GroupMessage, PrivateMessage
 from .handlers.private_handler import handle_private_message
 
 bot = CompatibleEnrollment  # 兼容回调函数注册器
+
+# 全局配置日志
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
 
 class MyPlugin(BasePlugin):
     name = "chat_friend"  # 插件名称
