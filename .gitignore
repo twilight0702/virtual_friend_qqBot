@@ -56,3 +56,5 @@ napcat/logs/
 plugins/chat_friend/ai_utils/key_config.ini
 
 plugins/chat_friend/memory/memory.db
+
+plugins/chat_friend/settings.ini

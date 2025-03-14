@@ -1,6 +1,7 @@
 import os
 import sqlite3
 import asyncio
+import configparser 
 from datetime import datetime, timedelta
 from ..ai_utils.check_memory import check_temp_memory, check_mid_memory, check_long_memory  # 调用你的记忆函数
 
@@ -11,17 +12,22 @@ logger = logging.getLogger(__name__)  # 获取当前模块的 logger
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # 当前模块所在目录
 DB_PATH = os.path.join(BASE_DIR, "memory.db")  # 让数据库文件存储在模块目录下
 
-TEMP_GROUP_SIZE=20 # 每一组处理的临时记忆条数
-MID_GROUP_SIZE=5 # 每一组处理的中期记忆条数
+BASE_DIR2 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))  
+CONFIG_FILE_PATH = os.path.join(BASE_DIR2, "settings.ini")
 
-# # 初始化数据库
+config = configparser.ConfigParser()
+config.read(CONFIG_FILE_PATH,encoding="utf-8")
+
+TEMP_GROUP_SIZE=config.getint("memory", "TEMP_GROUP_SIZE") # 每一组处理的临时记忆条数
+MID_GROUP_SIZE=config.getint("memory", "MID_GROUP_SIZE") # 每一组处理的中期记忆条数
+
+# # 初始化数据库(可以充当sql语句自行创建数据库)
 # def init_db():
 #     conn = sqlite3.connect(DB_PATH)
 #     cursor = conn.cursor()
 
 #     cursor.execute("""
 #         CREATE TABLE IF NOT EXISTS temp_memory (
-#             id INTEGER PRIMARY KEY AUTOINCREMENT,
 #             user_id TEXT NOT NULL,
 #             content TEXT NOT NULL,
 #             role TEXT NOT NULL,  -- "user" 或 "bot"
@@ -31,22 +37,26 @@ MID_GROUP_SIZE=5 # 每一组处理的中期记忆条数
 
 #     cursor.execute("""
 #         CREATE TABLE IF NOT EXISTS mid_memory (
-#             id INTEGER PRIMARY KEY AUTOINCREMENT,
 #             user_id TEXT NOT NULL,
 #             content TEXT NOT NULL UNIQUE,
-#             role TEXT NOT NULL,  -- "user" 或 "bot"
 #             timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 #         )
 #     """)
 
 #     cursor.execute("""
 #         CREATE TABLE IF NOT EXISTS long_memory (
-#             id INTEGER PRIMARY KEY AUTOINCREMENT,
 #             user_id TEXT NOT NULL,
 #             content TEXT NOT NULL UNIQUE,
-#             role TEXT NOT NULL,  -- "user" 或 "bot"
 #             timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 #         )
+#     """)
+
+#     cursor.execute("""
+#          CREATE TABLE user_characters (
+#            user_id   TEXT PRIMARY KEY
+#                       UNIQUE,
+#           character TEXT
+#       );
 #     """)
 
 #     conn.commit()
@@ -122,11 +132,11 @@ def clear_temp_memory(user_id):
 
 # 删除中期记忆（只留下最近的一条）
 def clear_mid_memory(user_id):
-    logger.info(f"删除{user_id}全部中期记忆")
+    logger.info(f"删除{user_id}的中期记忆")
     """ 清空用户的中期记忆 """
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM mid_memory WHERE timestamp IN ( SELECT timestamp FROM temp_memory WHERE user_id = ? ORDER BY timestamp LIMIT ?);", (user_id,MID_GROUP_SIZE-1))
+    cursor.execute("DELETE FROM mid_memory WHERE timestamp IN ( SELECT timestamp FROM mid_memory WHERE user_id = ? ORDER BY timestamp LIMIT ?);", (user_id,MID_GROUP_SIZE-1))
     conn.commit()
     conn.close()
 

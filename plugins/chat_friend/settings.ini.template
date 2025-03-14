@@ -1,0 +1,14 @@
+[deepseek]
+API_KEY = your_key
+BASE_URL = https://api.deepseek.com
+
+[memory]
+# 每一组处理的临时记忆条数
+TEMP_GROUP_SIZE=20 
+# 每一组处理的中期记忆条数
+MID_GROUP_SIZE=5
+
+[task]
+#BOT等待用户回复的时间（秒）
+WAIT_TIME=5
+

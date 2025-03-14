@@ -1,14 +1,8 @@
 # 该文件用于使用deepseek决定记忆存储相关判断
-from ..handlers.user_state import USER_CHARACTERS
 from openai import AsyncOpenAI, OpenAIError  # 处理 OpenAI 相关错误
 from ..config.config_loader import get_character
 import asyncio
 from .ai_helper import use_ai
-
-def get_character_prompt(user_id) -> str:
-    character = get_character(USER_CHARACTERS[user_id])
-    return character["system_prompt"]
-    
 
 # 用于判断临时记忆存储
 async def check_temp_memory(user_id, content) -> str:

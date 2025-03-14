@@ -33,3 +33,5 @@ class MyPlugin(BasePlugin):
         """插件加载时执行的操作"""
         print(f"{self.name} 插件已加载")
         print(f"插件版本: {self.version}")
+        
+    

@@ -26,7 +26,7 @@ class ConfigHandler(FileSystemEventHandler):
 # 初始化加载
 load_config()
 
-# 启动文件监听
+# 启动文件监听（角色设置热加载）
 observer = Observer()
 observer.schedule(ConfigHandler(), path=str(_CONFIG_PATH.parent))
 observer.start()
@@ -36,3 +36,7 @@ def get_character(name=None):
     if name:
         return _CHARACTERS.get(name)
     return _CHARACTERS  # 返回全部角色用于存在性检查
+
+# 获取当前所有角色
+def get_all_characters_names():
+    return list(_CHARACTERS.keys())
